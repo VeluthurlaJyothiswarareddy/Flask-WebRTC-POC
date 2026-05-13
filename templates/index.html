@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask WebRTC POC</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Flask WebRTC POC</h1>
+    <section class="controls">
+      <label for="roomId">Room ID</label>
+      <input id="roomId" type="text" placeholder="Enter room name" value="demo-room" />
+      <button id="joinButton">Join Room</button>
+      <div id="status">Ready</div>
+    </section>
+
+    <section class="video-grid">
+      <div>
+        <h2>Local video</h2>
+        <video id="localVideo" autoplay playsinline muted></video>
+      </div>
+      <div>
+        <h2>Remote video</h2>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="/static/main.js"></script>
+</body>
+</html>
